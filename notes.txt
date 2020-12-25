@@ -1,0 +1,4 @@
+Blades - outputting variables in this way is much easier than
+the regular php (php tags, echo statements.) It makes alitttle buit
+ easier for us
+ 

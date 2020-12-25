@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EmailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/h', function () {
-    return view('home');
-});
+// Route::get('/h', function () {
+//     return view('home');
+// });
+
+Route::get('/contact', [EmailController::class,'index']);
+Route::post('/sendemail/send', [EmailController::class,'send']);
+
+// Route::get('/contact', 'EmailController@index');
+// Route::post('/sendemail/send', 'EmailController@send');
+
+
